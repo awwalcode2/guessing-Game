@@ -1,0 +1,127 @@
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaBDyocST7J4bBpCVhPnx5IWmUcf3NxGcRcg&s);
+    width: 90%;
+    height: 100vh;
+    background-size: contain;
+    display: flex;
+    line-height: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(https://images5.alphacoders.com/403/403408.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* margin: auto; */
+} 
+#display {
+    background-color: rgba(0, 0, 0, 0.558);
+    color: white;
+    border-radius: 15px;
+    width: 350px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+}
+
+#functionality {
+    background-color: rgba(247, 243, 243, 0.884);
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+#pickedButton {
+    background-color: brown;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#allButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#pack {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+}
+
+#pack button {
+    font-size: 17px;
+    background-color: #0c4893;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: -3px 3px 4px yellow;
+}
+
+#starting {
+    border: none;
+    background-color: red;
+    box-shadow: 3px -3px 8px yellow, -3px -4px 8px yellow, 3px 3px 8px yellow;
+    font-size: 17px;
+    font-style: italic;
+    box-sizing: border-box;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#guessGame {
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #f1c8a1;
+    font-size: 17px;
+    font-style: oblique;
+    cursor: pointer;
+}
+
+#display2 {
+    font-size: 70px;
+    width: 80px;
+    height: 50px;
+    color: red;
+}
+
+.scores-div {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+
+}
+
+#clue {
+    color: black;
+}
+
+span {
+    font-size: 40px;
+}
+
+#dollar {
+    width: 70px;
+    text-align: center;
+    border: 6px dashed #f3de63;
+    background-color: #f3bd26;
+    color: #f8e75d;
+} 

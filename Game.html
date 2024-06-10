@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+
+    <div>
+        <h1 id="clue">THIS IS A SIMPLE NUMERIC GUESSING GAME</h1>
+    </div>
+    <div id="functionality">
+        <div id="display-pack">
+            <div id="display"></div>
+        </div>
+        <div>
+            <h1 id="pickedButton"></h1>
+        </div>
+        <div id="allButtons">
+            <div id="pack">
+                <button onclick="showValue(1)">1</button>
+                <button onclick="showValue(2)">2</button>
+                <button onclick="showValue(3)">3</button>
+            </div>
+            <div id="pack">
+                <button onclick="showValue(4)">4</button>
+                <button onclick="showValue(5)">5</button>
+                <button onclick="showValue(6)">6</button>
+            </div>
+            <div id="pack">
+                <button onclick="showValue(7)">7</button>
+                <button onclick="showValue(8)">8</button>
+                <button onclick="showValue(9)">9</button>
+            </div>
+            <div id="pack"> <button onclick="showValue(0)">0</button></div>
+        </div>
+
+        <div><button id="guessGame" onclick="guess()">GUESS</button></div>
+        <button onclick="startGame()" id="starting">START GAME</button>
+    </div>
+    <div class="scores-div">
+        <div>
+            <h1 id="display2"></h1>
+        </div>
+        <div id="dollar">
+            <span> $<span id="scores"></span></span>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let randomNum = Math.floor(Math.random() * 10)
+    let num = ""
+    allButtons.style.display = "none"
+    pickedButton.style.display = "none"
+    guessGame.style.display = "none"
+    function showValue(e) {
+        randomNum = Math.floor(Math.random() * 10)
+        pickedButton.innerHTML = e
+        num = e
+    }
+
+    let index = 6
+    let index2 = 0
+    scores.innerHTML = + index2
+    let timeInterval = ""
+
+
+    function guess() {
+        clearInterval(timeInterval)
+        starting.style.display = "block"
+        allButtons.style.display = "none"
+        pickedButton.style.display = "none"
+        guessGame.style.display = "none"
+        if (randomNum === num) {
+            display.innerHTML = `WOOOO!!! correct the answer is ${randomNum}`
+            scores.innerHTML++
+        }
+        else {
+            display.innerHTML = `You are wrong but the correct answer is ${randomNum}`
+        }
+    }
+
+    function startGame() {
+        allButtons.style.display = "flex"
+        pickedButton.style.display = "block"
+        guessGame.style.display = "block"
+        starting.style.display = "none"
+        pickedButton.innerHTML = ""
+        display.innerHTML = ""
+        index = 6
+
+        timeInterval = setInterval(() => {
+            index--
+            display2.innerHTML = index
+            if (index === 0) {
+                clearInterval(timeInterval)
+                guess()
+                index = 6
+                starting.style.display = "block"
+                allButtons.style.display = "none"
+                pickedButton.style.display = "none"
+                guessGame.style.display = "none"
+            }
+        }, 1000);
+    }
+</script>
